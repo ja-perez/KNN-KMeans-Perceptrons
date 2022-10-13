@@ -21,6 +21,9 @@ def load_data(file_data):
 X, Y = load_data("nearest_neighbors_1.csv")
 acc = nn.KNN_test(X, Y, X, Y, 1)
 print("KNN:", acc)
+# Added by me
+best_k = nn.choose_K(X, Y, X, Y)
+print("Optimal K:", best_k)
 
 X = np.genfromtxt("clustering_1.csv", skip_header=1, delimiter=',')
 mu = np.array([[1], [5]])
