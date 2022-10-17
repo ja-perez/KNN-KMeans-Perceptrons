@@ -3,7 +3,6 @@ from scipy.spatial import distance
 
 
 def KNN_test(X_train, Y_train, X_test, Y_test, K):
-    print(X_train, Y_train, X_test, Y_test, sep='\n\n', end='\n\n')
     calculated_dist = {}
     k_dist, k_labels = [], []
     results = []
