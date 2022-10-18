@@ -15,25 +15,25 @@ def KNN_test(X_train, Y_train, X_test, Y_test, K):
         results.append(1 if (k_labels[-1] > 0 and Y_test[i] > 0) or (k_labels[-1] < 0 and Y_test[i] < 0) else 0)
 
     # Plotting data points
-    if len(X_train[0]) == 2:
-        x_values = [val for val in X_train[:, 0]]
-        y_values = [val for val in X_train[:, 1]]
-        # Plot train data
-        fig = plt.figure()
-        fig.suptitle("KNN with K = " + str(K))
-        plt.subplot(1, 3, 1)
-        plot_points(x_values, y_values, Y_train, "Train")
-
-        # Plot test data
-        x_values = [val for val in X_test[:, 0]]
-        y_values = [val for val in X_test[:, 1]]
-        plt.subplot(1, 3, 2)
-        plot_points(x_values, y_values, Y_test, "Test")
-
-        # Plot predicted data
-        plt.subplot(1, 3, 3)
-        plot_points(x_values, y_values, k_labels, "Predicted")
-        plt.show()
+    # if len(X_train[0]) == 2:
+    #     x_values = [val for val in X_train[:, 0]]
+    #     y_values = [val for val in X_train[:, 1]]
+    #     # Plot train data
+    #     fig = plt.figure()
+    #     fig.suptitle("KNN with K = " + str(K))
+    #     plt.subplot(1, 3, 1)
+    #     plot_points(x_values, y_values, Y_train, "Train")
+    #
+    #     # Plot test data
+    #     x_values = [val for val in X_test[:, 0]]
+    #     y_values = [val for val in X_test[:, 1]]
+    #     plt.subplot(1, 3, 2)
+    #     plot_points(x_values, y_values, Y_test, "Test")
+    #
+    #     # Plot predicted data
+    #     plt.subplot(1, 3, 3)
+    #     plot_points(x_values, y_values, k_labels, "Predicted")
+    #     plt.show()
     return sum(results) / len(results)
 
 
